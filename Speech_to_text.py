@@ -1,6 +1,7 @@
 import whisper
 import Speaker as voice
 from Listen import Listen
+import Image_generation as i
 
 # Listen and then text file
 
@@ -17,6 +18,4 @@ result=Speech_to_text()
 
 voice.text_to_speech(result)
 voice.speak_mp3()
-
-# function calling for openai for image generation
-
+i.chatgpt((result))
